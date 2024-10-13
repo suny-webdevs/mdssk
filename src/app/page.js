@@ -1,9 +1,9 @@
-import Image from "next/image"
+import MainPage from "@/components/mainpage/MainPage"
 
 export default function Home() {
   return (
-    <div className="">
-      <h1>MDSSK</h1>
+    <div>
+      <MainPage />
     </div>
   )
 }
