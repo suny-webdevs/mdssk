@@ -16,7 +16,7 @@ const Button = ({
       onClick={onClick}
       onMouseEnter={mouseIn}
       onMouseLeave={mouseOut}
-      className={`text-sm md:text-base font-outfit font-medium tracking-widest rounded-3xl uppercase px-5 py-2 md:px-6 md:py-2 ${className}`}
+      className={`text-sm md:text-base font-outfit font-medium tracking-widest rounded-3xl uppercase px-5 py-1.5 md:px-6 md:py-1.5 ${className}`}
       disabled={disabled}
       {...props}
     >

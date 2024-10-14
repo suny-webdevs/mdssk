@@ -6,11 +6,9 @@ import Link from "next/link"
 import { useState } from "react"
 import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
-import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 
 const MenuPage = () => {
   const [talkMouseOver, setTalkMouseOver] = useState(false)
-  //   const [menuMouseOver, setMenuMouseOver] = useState(false)
 
   const links = [
     {
@@ -58,9 +56,7 @@ const MenuPage = () => {
               <Link
                 key={index}
                 href={link.href}
-                // onMouseEnter={() => setMenuMouseOver(true)}
-                // onMouseLeave={() => setMenuMouseOver(false)}
-                className="text-3xl md:text-5xl font-medium sm:hover:scale-110 md:hover:translate-x-5 transition-transform duration-200 hover:bg-gradient-to-tr hover:from-pink-500 hover:to-violet-600 hover:inline-block hover:text-transparent hover:bg-clip-text"
+                className="text-3xl md:text-4xl font-medium sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200 hover:bg-gradient-to-tr hover:from-pink-500 hover:to-violet-600 hover:inline-block hover:text-transparent hover:bg-clip-text"
               >
                 {link.title}
               </Link>
