@@ -21,9 +21,9 @@ const Navbar = () => {
     <PageWrapper className="flex items-center justify-between mb-3 py-5">
       <Link
         href={"/"}
-        className="text-xl md:text-3xl text-white font-bold font-outfit tracking-widest"
+        className="text-2xl md:text-3xl text-white font-bold font-outfit tracking-widest"
       >
-        {"<Suny-webDevs/>"}
+        {"<SWD/>"}
       </Link>
       <div className="flex gap-3">
         {/* Button: Lets Talk */}

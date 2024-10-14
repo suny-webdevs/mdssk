@@ -1,8 +1,10 @@
 const HeroSection = () => {
   return (
     <div>
-      <div>
-        <h1 className="text-5xl font-bold text-white">md suny shaikh</h1>
+      <div className="py-20">
+        <h1 className="text-6xl md:text-9xl text-center font-bold text-white capitalize">
+          md suny shaikh
+        </h1>
       </div>
     </div>
   )
