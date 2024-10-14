@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`bg-black`}>
         <Navbar />
-        <PageWrapper className="mt-5">{children}</PageWrapper>
+        <PageWrapper className="mt-5 text-white font-outfit">
+          {children}
+        </PageWrapper>
       </body>
     </html>
   )

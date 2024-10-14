@@ -6,10 +6,16 @@ import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
 import PageWrapper from "./PageWrapper"
 import Button from "./Button"
+import { usePathname, useRouter } from "next/navigation"
 
 const Navbar = () => {
+  const router = useRouter()
+  const pathname = usePathname()
+
   const [menuMouseOver, setMenuMouseOver] = useState(false)
   const [talkMouseOver, setTalkMouseOver] = useState(false)
+
+  if (pathname.includes("menu")) return
 
   return (
     <PageWrapper className="flex items-center justify-between mb-3 py-5">
@@ -25,7 +31,7 @@ const Navbar = () => {
           mouseIn={() => setTalkMouseOver(true)}
           mouseOut={() => setTalkMouseOver(false)}
           className={
-            "bg-white/10 hover:bg-white/20 text-white transition-all ease-in-out duration-200 hidden md:flex items-center gap-1"
+            "bg-white/10 hover:bg-white/20 text-white hidden md:flex items-center gap-1"
           }
         >
           let&apos;s talk{" "}
@@ -37,11 +43,10 @@ const Navbar = () => {
         </Button>
         {/* Button: Menu */}
         <Button
+          onClick={() => router.push("/menu")}
           mouseIn={() => setMenuMouseOver(true)}
           mouseOut={() => setMenuMouseOver(false)}
-          className={
-            "bg-white text-black transition-all ease-in-out duration-200 flex items-center gap-1"
-          }
+          className={"bg-white text-black flex items-center gap-1"}
         >
           menu{" "}
           {menuMouseOver ? (
