@@ -1,21 +1,19 @@
 import Navbar from "@/components/shared/Navbar"
 import "./globals.css"
-import { sectionStyle } from "@/lib/styles"
+import PageWrapper from "@/components/shared/PageWrapper"
 
 export const metadata = {
-  title: "Md Suny Shaikh | MDSSK",
+  title: "Md Suny Shaikh | Suny-webDevs",
   description:
-    "I am Md Suny Shaikh. I am a web developer. MDSSK is my personal portfolio website.",
+    "I am Md Suny Shaikh. I am a web developer. Suny-webDevs is my personal portfolio website.",
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`antialiased ${sectionStyle} bg-black`}>
-        <div>
-          <Navbar />
-        </div>
-        <div>{children}</div>
+      <body className={`bg-black`}>
+        <Navbar />
+        <PageWrapper className="mt-5">{children}</PageWrapper>
       </body>
     </html>
   )
