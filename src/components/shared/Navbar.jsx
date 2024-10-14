@@ -31,12 +31,12 @@ const Navbar = () => {
           mouseIn={() => setTalkMouseOver(true)}
           mouseOut={() => setTalkMouseOver(false)}
           className={
-            "bg-white/10 hover:bg-white/20 text-white hidden md:flex items-center gap-1"
+            "group bg-white/10 hover:bg-white/20 text-white hidden md:flex items-center gap-1"
           }
         >
           let&apos;s talk{" "}
           {talkMouseOver ? (
-            <HiArrowUpRight className="text-xl" />
+            <HiArrowUpRight className="text-xl group-hover:transition-all group-hover:duration-200" />
           ) : (
             <GoDotFill className="text-white/50" />
           )}
@@ -46,11 +46,11 @@ const Navbar = () => {
           onClick={() => router.push("/menu")}
           mouseIn={() => setMenuMouseOver(true)}
           mouseOut={() => setMenuMouseOver(false)}
-          className={"bg-white text-black flex items-center gap-1"}
+          className={"group bg-white text-black flex items-center gap-1"}
         >
           menu{" "}
           {menuMouseOver ? (
-            <HiOutlineArrowNarrowRight className="text-xl" />
+            <HiOutlineArrowNarrowRight className="text-xl group-hover:transition-all group-hover:duration-200" />
           ) : (
             <GoDotFill className="text-black/30" />
           )}
