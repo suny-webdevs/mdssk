@@ -15,7 +15,7 @@ const Navbar = () => {
     <PageWrapper className="flex items-center justify-between mb-3 py-5">
       <Link
         href={"/"}
-        className="text-3xl text-white font-bold font-outfit tracking-widest"
+        className="text-xl md:text-3xl text-white font-bold font-outfit tracking-widest"
       >
         {"<Suny-webDevs/>"}
       </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
           mouseIn={() => setTalkMouseOver(true)}
           mouseOut={() => setTalkMouseOver(false)}
           className={
-            "bg-white/10 hover:bg-white/20 text-white transition-all ease-in-out duration-200 flex items-center gap-1"
+            "bg-white/10 hover:bg-white/20 text-white transition-all ease-in-out duration-200 hidden md:flex items-center gap-1"
           }
         >
           let&apos;s talk{" "}
