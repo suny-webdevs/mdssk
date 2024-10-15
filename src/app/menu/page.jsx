@@ -1,6 +1,7 @@
 "use client"
 import Button from "@/components/shared/Button"
 import PageWrapper from "@/components/shared/PageWrapper"
+import TextGradient from "@/components/shared/TextGradient"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -56,9 +57,17 @@ const MenuPage = () => {
               <Link
                 key={index}
                 href={link.href}
-                className="text-3xl md:text-4xl font-medium sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200 hover:bg-gradient-to-tr hover:from-pink-500 hover:to-violet-600 hover:inline-block hover:text-transparent hover:bg-clip-text"
+                className="text-3xl md:text-4xl font-medium sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
               >
-                {link.title}
+                <TextGradient
+                  className="text-white hover:text-violet-500"
+                  direction="tr"
+                  hover={true}
+                  from={"pink-600"}
+                  to={"violet-600"}
+                >
+                  {link.title}
+                </TextGradient>
               </Link>
             ))}
           </div>

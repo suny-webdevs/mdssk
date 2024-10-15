@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 
 const PageWrapper = ({ children, className }) => {
   return (
-    <div className={`container mx-auto px-2 md:px-0 ${className}`}>
+    <div className={`container mx-auto px-5 md:px-0 ${className}`}>
       {children}
     </div>
   )
