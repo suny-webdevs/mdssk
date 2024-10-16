@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
+        "gradient-to-tr":
+          "linear-gradient(to top right, var(--tw-gradient-stops))",
+        "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
+        // Add more as needed
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -14,6 +21,11 @@ module.exports = {
       fontFamily: {
         outfit: '"Outfit", sans-serif',
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundImage: ["hover"],
     },
   },
   plugins: [],

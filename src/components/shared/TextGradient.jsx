@@ -1,25 +1,15 @@
 import PropTypes from "prop-types"
 
-const TextGradient = ({
-  children,
-  className,
-  direction,
-  hover = false,
-  from,
-  via,
-  to,
-}) => {
+const TextGradient = ({ children, className, hover = false }) => {
+  const gradient = `bg-gradient-to-tr from-[#eb75b6] to-[#6e3deb]`
+  const gradientHover =
+    "hover:bg-gradient-to-tr hover:from-[#00CC99] hover:to-[#6600FF]"
+
   return (
     <span
       className={`${
-        hover
-          ? `hover:bg-gradient-to-${direction} hover:from-${from} ${
-              via && `hover:via-${via}`
-            } hover:to-${to} hover:inline-block hover:text-transparent hover:bg-clip-text`
-          : `bg-gradient-to-${direction} from-${from} ${
-              via && `via-${via}`
-            } to-${to} text-transparent inline-block bg-clip-text`
-      } ${className}`}
+        hover ? `${gradientHover} bg-white` : gradient
+      } text-transparent inline-block bg-clip-text ${className}`}
     >
       {children}
     </span>
@@ -27,13 +17,9 @@ const TextGradient = ({
 }
 
 TextGradient.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  direction: PropTypes.string,
   hover: PropTypes.bool,
-  from: PropTypes.string,
-  via: PropTypes.string,
-  to: PropTypes.string,
 }
 
 export default TextGradient

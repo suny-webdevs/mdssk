@@ -11,9 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-black`}>
-        <Navbar />
-        <PageWrapper className="text-white font-outfit">{children}</PageWrapper>
+      <body
+        className={`bg-black text-white font-outfit selection:bg-white selection:text-black`}
+      >
+        <PageWrapper>
+          <Navbar />
+          {children}
+        </PageWrapper>
       </body>
     </html>
   )

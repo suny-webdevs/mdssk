@@ -4,7 +4,6 @@ import { useState } from "react"
 import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
-import PageWrapper from "./PageWrapper"
 import Button from "./Button"
 import { usePathname, useRouter } from "next/navigation"
 
@@ -18,7 +17,7 @@ const Navbar = () => {
   if (pathname.includes("menu")) return
 
   return (
-    <PageWrapper className="flex items-center justify-between mb-3 py-5">
+    <div className="flex items-center justify-between mb-3 py-5">
       <Link
         href={"/"}
         className="text-2xl md:text-3xl text-white font-bold font-outfit tracking-widest"
@@ -56,7 +55,7 @@ const Navbar = () => {
           )}
         </Button>
       </div>
-    </PageWrapper>
+    </div>
   )
 }
 

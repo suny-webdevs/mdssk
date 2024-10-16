@@ -1,9 +1,8 @@
 "use client"
 import Button from "@/components/shared/Button"
+import MenuLinks from "@/components/shared/MenuLinks"
 import PageWrapper from "@/components/shared/PageWrapper"
-import TextGradient from "@/components/shared/TextGradient"
 import Image from "next/image"
-import Link from "next/link"
 import { useState } from "react"
 import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
@@ -35,7 +34,7 @@ const MenuPage = () => {
   ]
 
   return (
-    <div data-aos="fade-down">
+    <div data-aos="fade-left">
       <PageWrapper className="grid grid-cols-1 md:grid-cols-2 gap-5 h-screen">
         <div className="hidden md:flex justify-end items-center">
           <Image
@@ -52,24 +51,12 @@ const MenuPage = () => {
               {"<Suny-webDevs/>"}
             </h1>
           </div>
-          <div className="flex flex-col justify-center items-center md:items-start gap-5">
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className="text-3xl md:text-4xl font-medium sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
-              >
-                <TextGradient
-                  className="text-white hover:text-violet-500"
-                  direction="tr"
-                  hover={true}
-                  from={"pink-600"}
-                  to={"violet-600"}
-                >
-                  {link.title}
-                </TextGradient>
-              </Link>
-            ))}
+          <div>
+            <MenuLinks
+              links={links}
+              menuStyle="flex flex-col justify-center items-center md:items-start gap-5"
+              linkStyle="text-3xl md:text-4xl font-medium sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
+            />
           </div>
           <div className="flex md:hidden">
             <Button
