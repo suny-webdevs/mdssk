@@ -25,7 +25,6 @@ const HeroSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 md:mb-20">
         {/* Bio section */}
-        {/* TODO: 1. Apply hover color LinkedIn and Facebook icon, 2. Deploy */}
         <div className="order-2 md:order-1 flex flex-col gap-10">
           <div>
             <h3 className="text-lg font-medium uppercase tracking-widest">
@@ -121,7 +120,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scores */}
-        <div className="order-3 md:order-3 text-center md:text-right flex md:flex-col items-end justify-center gap-14">
+        <div className="order-3 md:order-3 text-center md:text-right flex md:flex-col items-end justify-center gap-5 md:gap-14">
           <div className="flex flex-col gap-1">
             <p className="text-6xl font-light">10</p>
             <h3 className="font-medium uppercase">projects done</h3>
