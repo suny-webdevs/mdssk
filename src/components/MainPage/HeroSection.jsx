@@ -18,7 +18,7 @@ const HeroSection = () => {
   return (
     <div>
       <div className="py-20">
-        <h1 className="text-[3.50rem] md:text-9xl text-center font-bold text-transparent capitalize font-outline-2">
+        <h1 className="text-5xl md:text-9xl text-center font-bold text-transparent capitalize font-outline-2">
           md suny shaikh
         </h1>
       </div>
@@ -90,7 +90,7 @@ const HeroSection = () => {
                   target="_blank"
                   className="group flex items-center gap-2"
                 >
-                  <SiLinkedin className="text-white group-hover:text-[#0077B5]" />{" "}
+                  <SiLinkedin className="text-white/50 group-hover:text-[#0077B5]" />{" "}
                   LinkedIn
                 </Link>
               </TextGradient>
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   target="_black"
                   className="group flex items-center gap-2"
                 >
-                  <SiFacebook className="text-white group-hover:text-[#0866FF]" />{" "}
+                  <SiFacebook className="text-white/50 group-hover:text-[#0866FF]" />{" "}
                   Facebook
                 </Link>
               </TextGradient>
