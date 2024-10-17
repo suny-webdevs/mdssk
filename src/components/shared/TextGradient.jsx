@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 
 const TextGradient = ({ children, className, hover = false }) => {
-  const gradient = `bg-gradient-to-tr from-[#eb75b6] to-[#6e3deb]`
+  const gradient = `bg-gradient-to-tr from-[#D761F7] via-[#7613F1] to-[#520E9D]`
   const gradientHover =
-    "hover:bg-gradient-to-tr hover:from-[#EF5F57] hover:to-[#6600FF]"
+    "hover:bg-gradient-to-tr hover:from-[#D761F7] hover:via-[#7613F1] hover:to-[#520E9D]"
 
   return (
     <span

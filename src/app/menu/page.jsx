@@ -1,9 +1,11 @@
 "use client"
 import Button from "@/components/shared/Button"
 import MenuLinks from "@/components/shared/MenuLinks"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
+import { SiFacebook, SiGithub, SiLinkedin } from "react-icons/si"
 
 const MenuPage = () => {
   const router = useRouter()
@@ -43,9 +45,26 @@ const MenuPage = () => {
         </button>
 
         <div
-          className="bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url("/Blush.png")' }}
-        ></div>
+          className="bg-cover bg-center bg-no-repeat"
+        >
+          <div className="w-full h-full bg-white/30 backdrop-blur-lg flex flex-col justify-center items-center gap-3 md:gap-5 py-5">
+            <h1 className="text-3xl md:text-7xl font-bold text-white tracking-wide">
+              {"<SDW/>"}
+            </h1>
+            <div className="flex items-center gap-3 md:gap-5">
+              <Link href={"https://github.com/suny-webdevs"}>
+                <SiGithub className="text-xl md:text-4xl" />
+              </Link>
+              <Link href={"https://linkedin.com/in/mdsunyshaikh"}>
+                <SiLinkedin className="text-xl md:text-4xl" />
+              </Link>
+              <Link href={"https://facebook.com/mdsunyshaikh"}>
+                <SiFacebook className="text-xl md:text-4xl" />
+              </Link>
+            </div>
+          </div>
+        </div>
 
         <div>
           <div className="flex flex-col gap-10 pt-10 md:pl-10">
