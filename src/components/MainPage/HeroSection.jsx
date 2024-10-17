@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import TextGradient from "../shared/TextGradient"
+import { GoArrowUpRight } from "react-icons/go"
 import {
   SiTailwindcss,
   SiMongodb,
@@ -72,38 +72,35 @@ const HeroSection = () => {
               connect
             </h3>
             <div className="text-lg font-light text-white/70 tracking-wide capitalize flex items-center gap-2 mt-2">
-              <TextGradient hover>
-                <Link
-                  href="https://github.com/suny-webdevs"
-                  target="_blank"
-                  className="group flex items-center gap-2"
-                >
-                  <SiGithub className="text-white/50 group-hover:text-white" />{" "}
-                  Github
-                </Link>
-              </TextGradient>
+              <Link
+                href="https://github.com/suny-webdevs"
+                target="_blank"
+                className="group text-white md:text-white/50 md:hover:text-white flex items-center gap-2 transition-all duration-150"
+              >
+                <SiGithub className="text-white md:text-white/50 md:group-hover:text-white" />{" "}
+                GitHub{" "}
+                <GoArrowUpRight className="md:hidden md:group-hover:flex text-white" />
+              </Link>
               <span>&bull;</span>
-              <TextGradient hover>
-                <Link
-                  href="https://www.linkedin.com/in/mdsunyshaikh/"
-                  target="_blank"
-                  className="group flex items-center gap-2"
-                >
-                  <SiLinkedin className="text-white/50 group-hover:text-[#0077B5]" />{" "}
-                  LinkedIn
-                </Link>
-              </TextGradient>
+              <Link
+                href="https://www.linkedin.com/in/mdsunyshaikh/"
+                target="_blank"
+                className="group text-white md:text-white/50 md:hover:text-white flex items-center gap-2 transition-all duration-150"
+              >
+                <SiLinkedin className="text-[#0077B5] md:text-white/50 md:group-hover:text-[#0077B5]" />{" "}
+                LinkedIn{" "}
+                <GoArrowUpRight className="md:hidden md:group-hover:flex text-white" />
+              </Link>
               <span>&bull;</span>
-              <TextGradient hover>
-                <Link
-                  href="https://facebook.com/mdsunyshaikh"
-                  target="_black"
-                  className="group flex items-center gap-2"
-                >
-                  <SiFacebook className="text-white/50 group-hover:text-[#0866FF]" />{" "}
-                  Facebook
-                </Link>
-              </TextGradient>
+              <Link
+                href="https://facebook.com/mdsunyshaikh"
+                target="_black"
+                className="group text-white md:text-white/50 md:hover:text-white flex items-center gap-2 transition-all duration-150"
+              >
+                <SiFacebook className="text-[#0866FF] md:text-white/50 md:group-hover:text-[#0866FF]" />{" "}
+                Facebook{" "}
+                <GoArrowUpRight className="md:hidden md:group-hover:flex text-white" />
+              </Link>
             </div>
           </div>
         </div>

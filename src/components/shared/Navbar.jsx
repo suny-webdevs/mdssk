@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className="flex items-center justify-between mb-3 py-5">
       <Link
         href={"/"}
-        className="text-2xl md:text-3xl text-white font-bold font-outfit tracking-widest"
+        className="text-2xl md:text-3xl text-black bg-white font-bold font-outfit tracking-widest border border-white"
       >
         {"<SWD/>"}
       </Link>

@@ -55,7 +55,7 @@ const MenuPage = () => {
             <MenuLinks
               links={links}
               menuStyle="flex flex-col justify-center items-center md:items-start gap-5"
-              linkStyle="text-3xl md:text-4xl font-medium sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
+              linkStyle="text-3xl md:text-4xl font-medium uppercase sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
             />
           </div>
           <div className="flex md:hidden">
