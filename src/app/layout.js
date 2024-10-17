@@ -1,6 +1,5 @@
 import Navbar from "@/components/shared/Navbar"
 import "./globals.css"
-import PageWrapper from "@/components/shared/PageWrapper"
 
 export const metadata = {
   title: "Md Suny Shaikh | Suny-webDevs",
@@ -14,10 +13,8 @@ export default function RootLayout({ children }) {
       <body
         className={`bg-black text-white font-outfit selection:bg-white selection:text-black`}
       >
-        <PageWrapper>
-          <Navbar />
-          {children}
-        </PageWrapper>
+        <Navbar />
+        {children}
       </body>
     </html>
   )

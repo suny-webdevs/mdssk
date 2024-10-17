@@ -5,6 +5,7 @@ import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
 import Button from "./Button"
 import { usePathname, useRouter } from "next/navigation"
+import PageWrapper from "./PageWrapper"
 
 const Navbar = () => {
   const router = useRouter()
@@ -13,10 +14,10 @@ const Navbar = () => {
   if (pathname.includes("menu")) return
 
   return (
-    <div className="flex items-center justify-between mb-3 py-5">
+    <PageWrapper className="flex items-center justify-between mb-3 py-5">
       <Link
         href={"/"}
-        className="text-2xl md:text-3xl text-black bg-white font-bold font-outfit tracking-widest border border-white"
+        className="text-3xl text-white font-outline-2 font-bold font-outfit tracking-widest"
       >
         {"<SWD/>"}
       </Link>
@@ -41,7 +42,7 @@ const Navbar = () => {
           <GoDotFill className="text-black/30 group-hover:hidden" />
         </Button>
       </div>
-    </div>
+    </PageWrapper>
   )
 }
 

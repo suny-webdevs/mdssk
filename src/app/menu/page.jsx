@@ -1,12 +1,13 @@
 "use client"
 import Button from "@/components/shared/Button"
 import MenuLinks from "@/components/shared/MenuLinks"
-import PageWrapper from "@/components/shared/PageWrapper"
-import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
 
 const MenuPage = () => {
+  const router = useRouter()
+
   const links = [
     {
       title: "Home",
@@ -32,42 +33,43 @@ const MenuPage = () => {
 
   return (
     <div data-aos="fade-left">
-      <PageWrapper className="grid grid-cols-1 md:grid-cols-2 gap-5 h-screen">
-        <div className="hidden md:flex justify-end items-center">
-          <Image
-            src={"/Blush.png"}
-            alt="menu-image"
-            width={1920}
-            height={1080}
-            className="w-[300px] h-[95vh] rounded-xl"
-          />
-        </div>
-        <div className="flex flex-col justify-between md:justify-center items-center md:items-start gap-10 md:pb-2 py-10 md:py-0">
-          <div className="flex md:hidden">
-            <h1 className="text-3xl font-mono font-bold tracking-widest">
-              {"<Suny-webDevs/>"}
-            </h1>
-          </div>
-          <div>
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5 h-screen">
+        <button
+          type="button"
+          onClick={() => router.back()}
+          className="absolute top-5 right-5 text-lg text-white hover:bg-white hover:text-black px-3 py-1 border-2 border-white"
+        >
+          X
+        </button>
+
+        <div
+          className="bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url("/Blush.png")' }}
+        ></div>
+
+        <div>
+          <div className="flex flex-col gap-10 pt-10 md:pl-10">
             <MenuLinks
               links={links}
               menuStyle="flex flex-col justify-center items-center md:items-start gap-5"
-              linkStyle="text-3xl md:text-4xl font-medium uppercase hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
+              linkStyle="text-3xl md:text-5xl font-medium uppercase hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
             />
-          </div>
-          <div className="flex md:hidden">
-            <Button
-              className={
-                "group bg-white/10 hover:bg-white/20 text-white flex items-center gap-1"
-              }
-            >
-              let&apos;s talk{" "}
-              <HiArrowUpRight className="hidden group-hover:flex text-xl group-hover:transition-all group-hover:duration-200" />
-              <GoDotFill className="text-white/50 group-hover:hidden" />
-            </Button>
+
+            <div className="flex justify-center md:hidden">
+              <Button
+                large
+                className={
+                  "group bg-white/10 hover:bg-white/20 text-white flex items-center gap-1"
+                }
+              >
+                let&apos;s talk{" "}
+                <HiArrowUpRight className="hidden group-hover:flex text-xl group-hover:transition-all group-hover:duration-200" />
+                <GoDotFill className="text-white/50 group-hover:hidden" />
+              </Button>
+            </div>
           </div>
         </div>
-      </PageWrapper>
+      </div>
     </div>
   )
 }

@@ -7,6 +7,7 @@ const Button = ({
   onClick,
   mouseIn,
   mouseOut,
+  large = false,
   disabled = false,
   ...props
 }) => {
@@ -16,7 +17,9 @@ const Button = ({
       onClick={onClick}
       onMouseEnter={mouseIn}
       onMouseLeave={mouseOut}
-      className={`text-sm md:text-base font-outfit font-medium tracking-widest rounded-3xl uppercase px-5 py-1.5 md:px-6 md:py-1.5 ${className}`}
+      className={`${
+        large ? "text-xl md:text-2xl" : "text-sm md:text-base"
+      } font-outfit font-medium tracking-widest rounded-3xl uppercase px-5 py-1.5 md:px-6 md:py-1.5 ${className}`}
       disabled={disabled}
       {...props}
     >
@@ -31,6 +34,7 @@ Button.propTypes = {
   mouseIn: PropTypes.func,
   mouseOut: PropTypes.func,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
+  large: PropTypes.bool,
   disabled: PropTypes.bool,
   className: PropTypes.string,
   props: PropTypes.object,
