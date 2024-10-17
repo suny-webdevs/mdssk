@@ -3,13 +3,10 @@ import Button from "@/components/shared/Button"
 import MenuLinks from "@/components/shared/MenuLinks"
 import PageWrapper from "@/components/shared/PageWrapper"
 import Image from "next/image"
-import { useState } from "react"
 import { GoDotFill } from "react-icons/go"
 import { HiArrowUpRight } from "react-icons/hi2"
 
 const MenuPage = () => {
-  const [talkMouseOver, setTalkMouseOver] = useState(false)
-
   const links = [
     {
       title: "Home",
@@ -55,23 +52,18 @@ const MenuPage = () => {
             <MenuLinks
               links={links}
               menuStyle="flex flex-col justify-center items-center md:items-start gap-5"
-              linkStyle="text-3xl md:text-4xl font-medium uppercase sm:hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
+              linkStyle="text-3xl md:text-4xl font-medium uppercase hover:scale-105 md:hover:translate-x-4 transition-transform duration-200"
             />
           </div>
           <div className="flex md:hidden">
             <Button
-              mouseIn={() => setTalkMouseOver(true)}
-              mouseOut={() => setTalkMouseOver(false)}
               className={
                 "group bg-white/10 hover:bg-white/20 text-white flex items-center gap-1"
               }
             >
               let&apos;s talk{" "}
-              {talkMouseOver ? (
-                <HiArrowUpRight className="text-xl group-hover:transition-all group-hover:duration-200" />
-              ) : (
-                <GoDotFill className="text-white/50" />
-              )}
+              <HiArrowUpRight className="hidden group-hover:flex text-xl group-hover:transition-all group-hover:duration-200" />
+              <GoDotFill className="text-white/50 group-hover:hidden" />
             </Button>
           </div>
         </div>

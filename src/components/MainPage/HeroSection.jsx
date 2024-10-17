@@ -79,7 +79,7 @@ const HeroSection = () => {
               >
                 <SiGithub className="text-white md:text-white/50 md:group-hover:text-white" />{" "}
                 GitHub{" "}
-                <GoArrowUpRight className="md:hidden md:group-hover:flex text-white" />
+                <GoArrowUpRight className="hidden md:group-hover:flex text-white" />
               </Link>
               <span>&bull;</span>
               <Link
@@ -89,7 +89,7 @@ const HeroSection = () => {
               >
                 <SiLinkedin className="text-[#0077B5] md:text-white/50 md:group-hover:text-[#0077B5]" />{" "}
                 LinkedIn{" "}
-                <GoArrowUpRight className="md:hidden md:group-hover:flex text-white" />
+                <GoArrowUpRight className="hidden md:group-hover:flex text-white" />
               </Link>
               <span>&bull;</span>
               <Link
@@ -99,7 +99,7 @@ const HeroSection = () => {
               >
                 <SiFacebook className="text-[#0866FF] md:text-white/50 md:group-hover:text-[#0866FF]" />{" "}
                 Facebook{" "}
-                <GoArrowUpRight className="md:hidden md:group-hover:flex text-white" />
+                <GoArrowUpRight className="hidden md:group-hover:flex text-white" />
               </Link>
             </div>
           </div>
