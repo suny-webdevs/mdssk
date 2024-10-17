@@ -49,18 +49,18 @@ const MenuPage = () => {
           className="bg-cover bg-center bg-no-repeat"
         >
           <div className="w-full h-full bg-white/30 backdrop-blur-lg flex flex-col justify-center items-center gap-3 md:gap-5 py-5">
-            <h1 className="text-3xl md:text-7xl font-bold text-white tracking-wide">
+            <h1 className="text-4xl md:text-7xl font-bold text-white tracking-wide">
               {"<SDW/>"}
             </h1>
-            <div className="flex items-center gap-3 md:gap-5">
+            <div className="flex items-center gap-4 md:gap-5">
               <Link href={"https://github.com/suny-webdevs"}>
-                <SiGithub className="text-xl md:text-4xl" />
+                <SiGithub className="text-2xl md:text-4xl" />
               </Link>
               <Link href={"https://linkedin.com/in/mdsunyshaikh"}>
-                <SiLinkedin className="text-xl md:text-4xl" />
+                <SiLinkedin className="text-2xl md:text-4xl" />
               </Link>
               <Link href={"https://facebook.com/mdsunyshaikh"}>
-                <SiFacebook className="text-xl md:text-4xl" />
+                <SiFacebook className="text-2xl md:text-4xl" />
               </Link>
             </div>
           </div>
