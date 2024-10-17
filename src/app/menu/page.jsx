@@ -39,7 +39,7 @@ const MenuPage = () => {
         <button
           type="button"
           onClick={() => router.back()}
-          className="absolute top-5 right-5 text-lg text-white hover:bg-white hover:text-black px-3 py-1 border-2 border-white"
+          className="z-10 absolute top-5 right-5 text-lg text-white hover:bg-white hover:text-black px-3 py-1 border-2 border-white"
         >
           X
         </button>
