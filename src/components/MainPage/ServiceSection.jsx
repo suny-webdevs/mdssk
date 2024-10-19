@@ -1,7 +1,6 @@
 import SectionTitle from "../shared/SectionTitle";
 import { HiChip } from "react-icons/hi";
 import ServiceCard from "../shared/ServiceCard";
-import { BsBrush } from "react-icons/bs";
 
 const services = [
   {
@@ -23,7 +22,7 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <div className="mb-20 grid grid-cols-1 gap-10 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
       <div>
         <SectionTitle
           icon={<HiChip className="text-lg" />}
@@ -37,7 +36,6 @@ const ServiceSection = () => {
           <ServiceCard
             key={index}
             index={index}
-            logo={<BsBrush />}
             title={title}
             description={description}
           />
