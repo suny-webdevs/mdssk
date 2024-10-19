@@ -7,26 +7,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        },
+      },
+      animation: {
+        gradient: "gradient 30s linear infinite",
+      },
       backgroundImage: {
         "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
         "gradient-to-tr":
           "linear-gradient(to top right, var(--tw-gradient-stops))",
         "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
-        // Add more as needed
-      },
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
       },
       fontFamily: {
         outfit: '"Outfit", sans-serif',
       },
     },
   },
-  variants: {
-    extend: {
-      backgroundImage: ["hover"],
-    },
-  },
   plugins: [],
-}
+};

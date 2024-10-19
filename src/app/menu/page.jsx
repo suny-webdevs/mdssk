@@ -1,14 +1,14 @@
-"use client"
-import Button from "@/components/shared/Button"
-import MenuLinks from "@/components/shared/MenuLinks"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { GoDotFill } from "react-icons/go"
-import { HiArrowUpRight } from "react-icons/hi2"
-import { SiFacebook, SiGithub, SiLinkedin } from "react-icons/si"
+"use client";
+import Button from "@/components/shared/Button";
+import MenuLinks from "@/components/shared/MenuLinks";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { GoDotFill } from "react-icons/go";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { SiFacebook, SiGithub, SiLinkedin } from "react-icons/si";
 
 const MenuPage = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const links = [
     {
@@ -31,15 +31,15 @@ const MenuPage = () => {
       title: "Contact",
       href: "/contact",
     },
-  ]
+  ];
 
   return (
     <div data-aos="fade-left">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-5 h-screen">
+      <div className="relative grid h-screen grid-cols-1 gap-5 md:grid-cols-2">
         <button
           type="button"
           onClick={() => router.back()}
-          className="z-10 absolute top-5 right-5 text-lg text-white hover:bg-white hover:text-black px-3 py-1 border-2 border-white"
+          className="absolute right-5 top-5 z-10 border-2 border-white px-3 py-1 text-lg text-white hover:bg-white hover:text-black"
         >
           X
         </button>
@@ -48,8 +48,8 @@ const MenuPage = () => {
           style={{ backgroundImage: 'url("/Blush.png")' }}
           className="bg-cover bg-center bg-no-repeat"
         >
-          <div className="w-full h-full bg-white/30 backdrop-blur-lg flex flex-col justify-center items-center gap-3 md:gap-5 py-5">
-            <h1 className="text-4xl md:text-7xl font-bold text-white tracking-wide">
+          <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-white/30 py-5 backdrop-blur-lg md:gap-5">
+            <h1 className="text-4xl font-bold tracking-wide text-white md:text-7xl">
               {"<SDW/>"}
             </h1>
             <div className="flex items-center gap-4 md:gap-5">
@@ -78,11 +78,11 @@ const MenuPage = () => {
               <Button
                 large
                 className={
-                  "group bg-white/10 hover:bg-white/20 text-white flex items-center gap-1"
+                  "group flex items-center gap-1 bg-white/10 text-white hover:bg-white/20"
                 }
               >
                 let&apos;s talk{" "}
-                <HiArrowUpRight className="hidden group-hover:flex text-xl group-hover:transition-all group-hover:duration-200" />
+                <HiArrowUpRight className="hidden text-xl group-hover:flex group-hover:transition-all group-hover:duration-200" />
                 <GoDotFill className="text-white/50 group-hover:hidden" />
               </Button>
             </div>
@@ -90,7 +90,7 @@ const MenuPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MenuPage
+export default MenuPage;

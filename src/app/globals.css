@@ -12,3 +12,17 @@
     -webkit-text-stroke: 4px white;
   }
 }
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #f761e0,
+    #7613f1,
+    #520e9d,
+    #7613f1,
+    #f761e0,
+    #520e9d
+  );
+  background-clip: text;
+  background-size: 300% 300%;
+}
