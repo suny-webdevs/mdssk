@@ -25,7 +25,12 @@ const ServiceSection = () => {
   return (
     <div className="mb-20 grid grid-cols-1 gap-10 md:grid-cols-3">
       <div>
-        <SectionTitle tag="services" title="what i" gradientText="do" />
+        <SectionTitle
+          icon={<HiChip className="text-lg" />}
+          tag="services"
+          title="what i"
+          gradientText="do"
+        />
       </div>
       <div className="col-span-2 flex flex-col gap-5">
         {services.map(({ title, description }, index) => (
