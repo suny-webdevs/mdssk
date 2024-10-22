@@ -1,21 +1,20 @@
-import PropTypes from "prop-types"
-import TextGradient from "./TextGradient"
-
+import PropTypes from "prop-types";
+import TextGradient from "./TextGradient";
 const SectionTitle = ({ icon, tag, title, gradientText, description }) => {
   return (
     <div>
-      <p className="flex items-center gap-2 text-base text-white/50 font-medium uppercase tracking-widest">
+      <p className="flex items-center gap-2 text-base font-medium uppercase tracking-widest text-white/50">
         {icon} {tag}
       </p>
-      <h1 className="text-6xl text-white font-medium capitalize mt-2">
+      <h1 className="mt-2 text-5xl font-medium capitalize text-white">
         {title} <TextGradient>{gradientText}</TextGradient>
       </h1>
       {description && (
-        <p className="text-base text-white/70 font-light">{description}</p>
+        <p className="text-base font-light text-white/70">{description}</p>
       )}
     </div>
-  )
-}
+  );
+};
 
 SectionTitle.propTypes = {
   tag: PropTypes.string,
@@ -23,6 +22,6 @@ SectionTitle.propTypes = {
   title: PropTypes.string,
   gradientText: PropTypes.string,
   description: PropTypes.string,
-}
+};
 
-export default SectionTitle
+export default SectionTitle;

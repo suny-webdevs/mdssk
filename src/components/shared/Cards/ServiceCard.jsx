@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import TextGradient from "./TextGradient";
+import TextGradient from "../TextGradient";
 
 const ServiceCard = ({ index, title, description }) => {
   return (

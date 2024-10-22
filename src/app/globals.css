@@ -26,3 +26,7 @@
   background-clip: text;
   background-size: 300% 300%;
 }
+
+.gradient-bg {
+  background: linear-gradient(to top right, #f761e0, #7613f1, #520e9d);
+}

@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#181A1C",
+        from: "#F761E0",
+        to: "#520E9D",
+        via: "#7613F1",
+      },
       keyframes: {
         gradient: {
           "0%": { backgroundPosition: "0% 50%" },
@@ -15,12 +21,6 @@ module.exports = {
       },
       animation: {
         gradient: "gradient 30s linear infinite",
-      },
-      backgroundImage: {
-        "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
-        "gradient-to-tr":
-          "linear-gradient(to top right, var(--tw-gradient-stops))",
-        "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
       },
       fontFamily: {
         outfit: '"Outfit", sans-serif',

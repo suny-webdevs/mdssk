@@ -1,6 +1,6 @@
+import ServiceCard from "../shared/Cards/ServiceCard";
 import SectionTitle from "../shared/SectionTitle";
 import { HiChip } from "react-icons/hi";
-import ServiceCard from "../shared/ServiceCard";
 
 const services = [
   {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const TextGradient = ({ children, className, hover = false }) => {
   const gradient = `gradient-text animate-gradient`;
   const gradientHover =
-    "hover:bg-gradient-to-tr hover:from-[#F761E0] hover:via-[#7613F1] hover:to-[#520E9D]";
+    "hover:bg-gradient-to-tr hover:from-from hover:via-via hover:to-to";
 
   return (
     <span
