@@ -26,7 +26,7 @@ const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
             <Link href={detailsLink}>
               <Button
                 className={
-                  "bg-black/20 text-white backdrop-blur-lg hover:bg-black/50"
+                  "w-full bg-black/20 text-white backdrop-blur-lg hover:bg-black/50"
                 }
               >
                 Learn More
@@ -35,7 +35,7 @@ const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
             <Link href={visitLink}>
               <Button
                 className={
-                  "border border-white bg-gradient-to-bl from-from via-via to-to hover:bg-gradient-to-tr"
+                  "w-full border border-white bg-gradient-to-bl from-from via-via to-to hover:bg-gradient-to-tr"
                 }
               >
                 Visit Site
