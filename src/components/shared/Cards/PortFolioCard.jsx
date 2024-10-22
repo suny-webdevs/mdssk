@@ -1,21 +1,20 @@
 "use client";
 import Image from "next/image";
 import PropTypes from "prop-types";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Button from "../Button";
 
-const PortFolioCard = ({ image, title, category, link }) => {
+const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
   return (
-    <div className="w-full rounded-xl bg-gradient-to-r from-[#F761E0] via-[#7613F1] to-[#520E9D] p-[.125rem]">
+    <div className="group w-full rounded-xl bg-gradient-to-r from-[#F761E0] via-[#7613F1] to-[#520E9D] p-[.125rem]">
       <div className="flex flex-col justify-center gap-4 rounded-xl bg-primary p-5">
-        <div className="h-[15rem] w-full">
+        <div className="h-[15rem] w-full overflow-hidden rounded-xl">
           <Image
             src={image}
             alt={title}
             width={1920}
             height={1080}
-            className="h-full w-full rounded-xl"
+            className="h-full w-full transition-transform duration-150 group-hover:scale-105"
           />
         </div>
         <div className="flex h-full w-full flex-col justify-center gap-8">
@@ -24,12 +23,12 @@ const PortFolioCard = ({ image, title, category, link }) => {
             <h1 className="text-4xl font-medium text-white">{title}</h1>
           </div>
           <div className="flex items-center gap-4">
-            <Link href={link}>
+            <Link href={detailsLink}>
               <Button className={"bg-black/20 text-white backdrop-blur-lg"}>
                 Learn More
               </Button>
             </Link>
-            <Link href={link}>
+            <Link href={visitLink}>
               <Button>Visit Site</Button>
             </Link>
           </div>
@@ -43,7 +42,8 @@ PortFolioCard.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
   category: PropTypes.string,
-  link: PropTypes.string,
+  detailsLink: PropTypes.string,
+  visitLink: PropTypes.string,
 };
 
 export default PortFolioCard;
