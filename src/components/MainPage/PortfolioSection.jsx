@@ -19,8 +19,8 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <div className="grid grid-cols-1 gap-8 rounded-2xl bg-primary p-5 md:gap-10 md:p-10">
-      <div>
+    <div className="grid grid-cols-1 gap-8 rounded-2xl bg-primary p-1 md:gap-10 md:p-10">
+      <div className="px-5 pt-5 md:px-0 md:pt-0">
         <SectionTitle
           icon={<BsFolderFill className="text-lg" />}
           tag="portfolio"
