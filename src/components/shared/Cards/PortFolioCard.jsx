@@ -6,7 +6,7 @@ import Button from "../Button";
 
 const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
   return (
-    <div className="group w-full rounded-xl bg-gradient-to-r from-[#F761E0] via-[#7613F1] to-[#520E9D] p-[.125rem]">
+    <div className="group w-full rounded-xl from-[#F761E0] via-[#7613F1] to-[#520E9D] md:bg-gradient-to-r md:p-[.125rem]">
       <div className="flex flex-col justify-center gap-4 rounded-xl bg-primary p-5">
         <div className="h-[15rem] w-full overflow-hidden rounded-xl">
           <Image

@@ -19,7 +19,7 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <div className="grid grid-cols-1 gap-5 rounded-2xl bg-primary p-5 md:gap-10 md:p-10">
+    <div className="grid grid-cols-1 gap-8 rounded-2xl bg-primary p-5 md:gap-10 md:p-10">
       <div>
         <SectionTitle
           icon={<BsFolderFill className="text-lg" />}
@@ -28,14 +28,15 @@ const PortfolioSection = () => {
           gradientText="works"
         />
       </div>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {projects.map(({ image, title, category, link }, index) => (
           <PortFolioCard
             key={index}
             image={image}
             title={title}
             category={category}
-            link={link}
+            visitLink={link}
+            detailsLink="#link"
           />
         ))}
       </div>
