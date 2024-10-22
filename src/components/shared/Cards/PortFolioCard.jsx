@@ -22,7 +22,7 @@ const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
             <p className="text-lg font-light text-white">{category}</p>
             <h1 className="text-4xl font-medium text-white">{title}</h1>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col justify-center gap-4 md:flex-row md:items-center">
             <Link href={detailsLink}>
               <Button
                 className={
@@ -35,7 +35,7 @@ const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
             <Link href={visitLink}>
               <Button
                 className={
-                  "from-from via-via to-to border border-white bg-gradient-to-bl hover:bg-gradient-to-tr"
+                  "border border-white bg-gradient-to-bl from-from via-via to-to hover:bg-gradient-to-tr"
                 }
               >
                 Visit Site
