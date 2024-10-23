@@ -1,12 +1,11 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 const Button = ({
   type = "button",
   className,
   children,
   onClick,
-  mouseIn,
-  mouseOut,
+  round = false,
   large = false,
   disabled = false,
   ...props
@@ -15,29 +14,26 @@ const Button = ({
     <button
       type={type}
       onClick={onClick}
-      onMouseEnter={mouseIn}
-      onMouseLeave={mouseOut}
       className={`${
         large ? "text-xl md:text-2xl" : "text-sm md:text-base"
-      } font-outfit font-medium tracking-widest rounded-3xl uppercase px-5 py-1.5 md:px-6 md:py-1.5 ${className}`}
+      } ${round ? "rounded-full px-2 py-2" : "rounded-3xl px-5 py-1.5 md:px-6 md:py-1.5"} font-outfit font-medium uppercase tracking-widest ${className}`}
       disabled={disabled}
       {...props}
     >
       {children}
     </button>
-  )
-}
+  );
+};
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  mouseIn: PropTypes.func,
-  mouseOut: PropTypes.func,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
+  round: PropTypes.bool,
   large: PropTypes.bool,
   disabled: PropTypes.bool,
   className: PropTypes.string,
   props: PropTypes.object,
-}
+};
 
-export default Button
+export default Button;

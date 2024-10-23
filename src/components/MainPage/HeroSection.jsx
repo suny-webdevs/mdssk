@@ -1,6 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-import { GoArrowUpRight } from "react-icons/go"
+import Image from "next/image";
+import Link from "next/link";
+import { GoArrowUpRight } from "react-icons/go";
 import {
   SiTailwindcss,
   SiMongodb,
@@ -12,25 +12,26 @@ import {
   SiGithub,
   SiLinkedin,
   SiFacebook,
-} from "react-icons/si"
+} from "react-icons/si";
+import PageWrapper from "../shared/PageWrapper";
 
 const HeroSection = () => {
   return (
-    <div>
+    <PageWrapper>
       <div className="py-20">
-        <h1 className="text-5xl md:text-9xl text-center font-bold text-transparent capitalize font-outline-2">
+        <h1 className="font-outline-2 text-center text-5xl font-bold capitalize text-transparent md:text-9xl">
           md suny shaikh
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 md:mb-20">
+      <div className="mb-10 grid grid-cols-1 gap-10 md:mb-20 md:grid-cols-3">
         {/* Bio section */}
-        <div className="order-2 md:order-1 flex flex-col gap-10">
+        <div className="order-2 flex flex-col gap-10 md:order-1">
           <div>
             <h3 className="text-lg font-medium uppercase tracking-widest">
               biography
             </h3>
-            <p className="text-lg font-light text-white/70 tracking-wide capitalize mt-2">
+            <p className="mt-2 text-lg font-light capitalize tracking-wide text-white/70">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
               quidem impedit dolor libero, sed soluta deleniti eum dignissimos
               facilis reiciendis?
@@ -40,7 +41,7 @@ const HeroSection = () => {
             <h3 className="text-lg font-medium uppercase tracking-widest">
               skills
             </h3>
-            <ul className="text-lg font-light text-white/70 tracking-wide capitalize mt-2">
+            <ul className="mt-2 text-lg font-light capitalize tracking-wide text-white/70">
               <li className="flex items-center gap-2">
                 <SiTailwindcss className="text-[#3EBFF8]" /> Tailwind CSS
               </li>
@@ -71,53 +72,53 @@ const HeroSection = () => {
             <h3 className="text-lg font-medium uppercase tracking-widest">
               connect
             </h3>
-            <div className="text-lg font-light text-white/70 tracking-wide capitalize flex items-center gap-2 mt-2">
+            <div className="mt-2 flex items-center gap-2 text-lg font-light capitalize tracking-wide text-white/70">
               <Link
                 href="https://github.com/suny-webdevs"
                 target="_blank"
-                className="group text-white md:text-white/50 md:hover:text-white flex items-center gap-2 transition-all duration-150"
+                className="group flex items-center gap-2 text-white transition-all duration-150 md:text-white/50 md:hover:text-white"
               >
                 <SiGithub className="text-white md:text-white/50 md:group-hover:text-white" />{" "}
                 GitHub{" "}
-                <GoArrowUpRight className="hidden md:group-hover:flex text-white" />
+                <GoArrowUpRight className="hidden text-white md:group-hover:flex" />
               </Link>
               <span>&bull;</span>
               <Link
                 href="https://www.linkedin.com/in/mdsunyshaikh/"
                 target="_blank"
-                className="group text-white md:text-white/50 md:hover:text-white flex items-center gap-2 transition-all duration-150"
+                className="group flex items-center gap-2 text-white transition-all duration-150 md:text-white/50 md:hover:text-white"
               >
                 <SiLinkedin className="text-[#0077B5] md:text-white/50 md:group-hover:text-[#0077B5]" />{" "}
                 LinkedIn{" "}
-                <GoArrowUpRight className="hidden md:group-hover:flex text-white" />
+                <GoArrowUpRight className="hidden text-white md:group-hover:flex" />
               </Link>
               <span>&bull;</span>
               <Link
                 href="https://facebook.com/mdsunyshaikh"
                 target="_black"
-                className="group text-white md:text-white/50 md:hover:text-white flex items-center gap-2 transition-all duration-150"
+                className="group flex items-center gap-2 text-white transition-all duration-150 md:text-white/50 md:hover:text-white"
               >
                 <SiFacebook className="text-[#0866FF] md:text-white/50 md:group-hover:text-[#0866FF]" />{" "}
                 Facebook{" "}
-                <GoArrowUpRight className="hidden md:group-hover:flex text-white" />
+                <GoArrowUpRight className="hidden text-white md:group-hover:flex" />
               </Link>
             </div>
           </div>
         </div>
 
         {/* Image */}
-        <div className="order-1 md:order-2 flex flex-col items-center justify-center">
+        <div className="order-1 flex flex-col items-center justify-center md:order-2">
           <Image
             src={"/profile.jpg"}
             alt="profile"
             width={1920}
             height={1080}
-            className="w-[300px] h-[300px] rounded-full"
+            className="h-[300px] w-[300px] rounded-full"
           />
         </div>
 
         {/* Scores */}
-        <div className="order-3 md:order-3 text-center md:text-right flex md:flex-col items-end justify-center gap-5 md:gap-14">
+        <div className="order-3 flex items-end justify-center gap-5 text-center md:order-3 md:flex-col md:gap-14 md:text-right">
           <div className="flex flex-col gap-1">
             <p className="text-6xl font-light">10</p>
             <h3 className="font-medium uppercase">projects done</h3>
@@ -132,8 +133,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+    </PageWrapper>
+  );
+};
 
-export default HeroSection
+export default HeroSection;
