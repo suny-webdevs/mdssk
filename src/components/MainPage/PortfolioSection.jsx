@@ -20,7 +20,10 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <div className="flex flex-col gap-8 bg-primary py-10 md:gap-14 md:py-20">
+    <div
+      id="portfolio"
+      className="flex flex-col gap-8 bg-primary py-10 md:gap-14 md:py-20"
+    >
       <PageWrapper>
         <div className="px-5 pt-5 md:px-0 md:pt-0">
           <SectionTitle

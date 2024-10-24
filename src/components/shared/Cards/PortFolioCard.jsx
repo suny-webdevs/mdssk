@@ -23,11 +23,11 @@ const PortFolioCard = ({ image, title, category, visitLink, detailsLink }) => {
         </div>
         <div className="flex h-full w-full flex-col justify-center gap-8">
           <div className="">
-            <span className="text-sm font-light text-white backdrop-blur-lg md:text-lg">
+            <span className="text-sm font-light capitalize text-white backdrop-blur-lg md:text-lg">
               {category}
             </span>
             <div className="flex items-center justify-between">
-              <h1 className="flex items-center gap-3 text-2xl font-medium text-white md:text-4xl">
+              <h1 className="flex items-center gap-3 text-2xl font-medium capitalize text-white md:text-4xl">
                 {title}
               </h1>
               <div className="flex items-center gap-3">

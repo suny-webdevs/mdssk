@@ -23,26 +23,28 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <PageWrapper className="grid grid-cols-1 gap-10 md:grid-cols-3">
-      <div>
-        <SectionTitle
-          icon={<HiChip className="text-lg" />}
-          tag="services"
-          title="what i"
-          gradientText="do"
-        />
-      </div>
-      <div className="col-span-2 flex flex-col gap-5">
-        {services.map(({ title, description }, index) => (
-          <ServiceCard
-            key={index}
-            index={index}
-            title={title}
-            description={description}
+    <div id="services">
+      <PageWrapper className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div>
+          <SectionTitle
+            icon={<HiChip className="text-lg" />}
+            tag="services"
+            title="what i"
+            gradientText="do"
           />
-        ))}
-      </div>
-    </PageWrapper>
+        </div>
+        <div className="col-span-2 flex flex-col gap-5">
+          {services.map(({ title, description }, index) => (
+            <ServiceCard
+              key={index}
+              index={index}
+              title={title}
+              description={description}
+            />
+          ))}
+        </div>
+      </PageWrapper>
+    </div>
   );
 };
 

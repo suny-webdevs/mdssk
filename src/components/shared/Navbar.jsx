@@ -1,49 +1,54 @@
-"use client"
-import Link from "next/link"
-import { HiOutlineArrowNarrowRight } from "react-icons/hi"
-import { GoDotFill } from "react-icons/go"
-import { HiArrowUpRight } from "react-icons/hi2"
-import Button from "./Button"
-import { usePathname, useRouter } from "next/navigation"
-import PageWrapper from "./PageWrapper"
+"use client";
+import Link from "next/link";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { GoDotFill } from "react-icons/go";
+import { HiArrowUpRight } from "react-icons/hi2";
+import Button from "./Button";
+import PageWrapper from "./PageWrapper";
+import { useState } from "react";
+import Menus from "./Menus";
 
 const Navbar = () => {
-  const router = useRouter()
-  const pathname = usePathname()
-
-  if (pathname.includes("menu")) return
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <PageWrapper className="flex items-center justify-between mb-3 py-5">
-      <Link
-        href={"/"}
-        className="text-3xl text-white font-outline-2 font-bold font-outfit tracking-widest"
-      >
-        {"<SWD/>"}
-      </Link>
-      <div className="flex gap-3">
-        {/* Button: Lets Talk */}
-        <Button
-          className={
-            "group bg-white/10 hover:bg-white/20 text-white hidden md:flex items-center gap-1"
-          }
+    <div className="fixed left-0 top-0 w-full bg-black/30 backdrop-blur-lg">
+      <PageWrapper className="flex items-center justify-between py-4">
+        <Link
+          href={"/"}
+          className="font-outline-2 font-outfit text-3xl font-bold tracking-widest text-white"
         >
-          let&apos;s talk{" "}
-          <HiArrowUpRight className="hidden group-hover:flex text-xl group-hover:transition-all group-hover:duration-200" />
-          <GoDotFill className="text-white/50 group-hover:hidden" />
-        </Button>
-        {/* Button: Menu */}
-        <Button
-          onClick={() => router.push("/menu")}
-          className={"group bg-white text-black flex items-center gap-1"}
-        >
-          menu{" "}
-          <HiOutlineArrowNarrowRight className="hidden group-hover:flex text-xl group-hover:transition-all group-hover:duration-200" />
-          <GoDotFill className="text-black/30 group-hover:hidden" />
-        </Button>
-      </div>
-    </PageWrapper>
-  )
-}
+          {"<SWD/>"}
+        </Link>
+        <div className="relative flex gap-3">
+          {/* Button: Lets Talk */}
+          <Button
+            className={
+              "group hidden items-center gap-1 bg-white/10 text-white hover:bg-white/20 md:flex"
+            }
+          >
+            let&apos;s talk{" "}
+            <HiArrowUpRight className="hidden text-xl group-hover:flex group-hover:transition-all group-hover:duration-200" />
+            <GoDotFill className="text-white/50 group-hover:hidden" />
+          </Button>
+          {/* Button: Menu */}
+          <Button
+            onClick={() => setIsOpen(!isOpen)}
+            onBlur={() => setIsOpen(false)}
+            className={"group flex items-center gap-1 bg-white text-black"}
+          >
+            menu{" "}
+            <HiOutlineArrowNarrowRight className="hidden text-xl group-hover:flex group-hover:transition-all group-hover:duration-200" />
+            <GoDotFill className="text-black/30 group-hover:hidden" />
+          </Button>
 
-export default Navbar
+          <Menus
+            className={`absolute right-0 top-0 z-50 w-56 translate-y-14 ${isOpen ? "flex flex-col gap-4" : "hidden"}`}
+          />
+        </div>
+      </PageWrapper>
+    </div>
+  );
+};
+
+export default Navbar;
