@@ -5,7 +5,7 @@ import ServiceSection from "./ServiceSection";
 
 const MainPage = () => {
   return (
-    <div className="my-10 flex flex-col gap-10 md:gap-14">
+    <div className="flex flex-col gap-10 py-10 md:gap-14">
       <HeroSection />
       <ServiceSection />
       <PortfolioSection />

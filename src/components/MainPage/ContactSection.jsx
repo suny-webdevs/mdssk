@@ -3,17 +3,26 @@ import PageWrapper from "../shared/PageWrapper";
 import SectionTitle from "../shared/SectionTitle";
 import TextGradient from "../shared/TextGradient";
 import Button from "../shared/Button";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsFillTelephoneOutboundFill } from "react-icons/bs";
+import { IoMdMail } from "react-icons/io";
+import { GrContact } from "react-icons/gr";
 
 const ContactSection = () => {
   return (
     <div id="contact">
       <PageWrapper className="grid grid-cols-1 gap-10 md:grid-cols-3">
-        <SectionTitle tag="Contact" title="Let's" gradientText="talk" />
+        <SectionTitle
+          icon={<GrContact />}
+          tag="Contact"
+          title="Let's"
+          gradientText="talk"
+        />
         <div className="col-span-2">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <div>
-              <p className="uppercase md:text-xl">Email </p>
+              <p className="flex items-center gap-3 uppercase md:text-xl">
+                <IoMdMail className="" /> Email{" "}
+              </p>
               <Link
                 href={"mailto:mdsunyshaikh@gmail.com"}
                 className="text-2xl font-medium"
@@ -22,7 +31,9 @@ const ContactSection = () => {
               </Link>
             </div>
             <div>
-              <p className="uppercase md:text-xl">Call </p>
+              <p className="flex items-center gap-3 uppercase md:text-xl">
+                <BsFillTelephoneOutboundFill className="text-base" /> Call
+              </p>
               <Link
                 href={"tel:+8801920827037"}
                 className="text-2xl font-medium"
@@ -57,7 +68,7 @@ const ContactSection = () => {
               <textarea
                 placeholder="Message"
                 rows="8"
-                className="w-full rounded-md border border-white/10 bg-primary px-3 py-2 outline-none"
+                className="w-full resize-none rounded-md border border-white/10 bg-primary px-3 py-2 outline-none"
               ></textarea>
             </div>
             <div className="flex items-center justify-start md:col-span-2 md:justify-end">
