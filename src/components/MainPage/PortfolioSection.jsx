@@ -1,7 +1,7 @@
 import PortFolioCard from "../shared/Cards/PortFolioCard";
 import PageWrapper from "../shared/PageWrapper";
 import SectionTitle from "../shared/SectionTitle";
-import { BsFolderFill } from "react-icons/bs";
+import { BsCollectionFill } from "react-icons/bs";
 
 const projects = [
   {
@@ -27,7 +27,7 @@ const PortfolioSection = () => {
       <PageWrapper>
         <div className="px-5 pt-5 md:px-0 md:pt-0">
           <SectionTitle
-            icon={<BsFolderFill className="text-lg" />}
+            icon={<BsCollectionFill className="text-lg" />}
             tag="portfolio"
             title="recent"
             gradientText="works"

@@ -1,3 +1,4 @@
+import ContactSection from "./ContactSection";
 import HeroSection from "./HeroSection";
 import PortfolioSection from "./PortfolioSection";
 import ServiceSection from "./ServiceSection";
@@ -8,6 +9,7 @@ const MainPage = () => {
       <HeroSection />
       <ServiceSection />
       <PortfolioSection />
+      <ContactSection />
     </div>
   );
 };

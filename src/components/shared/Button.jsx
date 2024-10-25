@@ -17,8 +17,8 @@ const Button = ({
       onClick={onClick}
       onBlur={onBlur}
       className={`${
-        large ? "text-xl md:text-2xl" : "text-sm md:text-base"
-      } ${round ? "rounded-full px-2 py-2" : "rounded-3xl px-5 py-1.5 md:px-6 md:py-1.5"} font-outfit font-medium uppercase tracking-widest ${className}`}
+        large ? "py-3" : "py-2"
+      } ${round ? "rounded-full px-2 py-2" : "rounded-3xl px-5 md:px-6"} font-outfit text-sm font-medium uppercase tracking-widest md:text-base ${className}`}
       disabled={disabled}
       {...props}
     >
