@@ -5,25 +5,25 @@ import { HiChip } from "react-icons/hi";
 
 const services = [
   {
-    title: "Design",
+    title: "Front-end",
     description:
-      "I specialize in creating visually stunning and user-friendly designs. I specialize in creating visually stunning and user-friendly designs.",
+      "Building intuitive, responsive, and user-friendly web interfaces with clean and efficient code.",
   },
   {
-    title: "Development",
+    title: "Back-end",
     description:
-      "I specialize in creating visually stunning and user-friendly designs. I specialize in creating visually stunning ",
+      "Powering seamless experiences with efficient, secure, and scalable backend solutions.",
   },
   {
-    title: "Marketing",
+    title: "Full Stack",
     description:
-      "I specialize in creating visually stunning and user-friendly designs. I specialize in creating visually stunning ",
+      "Bridging front and back—crafting seamless, scalable, and dynamic web solutions.",
   },
 ];
 
 const ServiceSection = () => {
   return (
-    <div id="services">
+    <section id="services">
       <PageWrapper className="grid grid-cols-1 gap-10 md:grid-cols-3">
         <div>
           <SectionTitle
@@ -44,7 +44,7 @@ const ServiceSection = () => {
           ))}
         </div>
       </PageWrapper>
-    </div>
+    </section>
   );
 };
 

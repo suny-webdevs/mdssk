@@ -20,7 +20,7 @@ const projects = [
 
 const PortfolioSection = () => {
   return (
-    <div
+    <section
       id="portfolio"
       className="flex flex-col gap-8 bg-primary py-10 md:gap-14 md:py-20"
     >
@@ -46,7 +46,7 @@ const PortfolioSection = () => {
           ))}
         </div>
       </PageWrapper>
-    </div>
+    </section>
   );
 };
 

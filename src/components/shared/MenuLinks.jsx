@@ -1,4 +1,3 @@
-import Link from "next/link";
 import PropTypes from "prop-types";
 import TextGradient from "./TextGradient";
 import { useRouter } from "next/navigation";
@@ -6,17 +5,21 @@ import { useRouter } from "next/navigation";
 const MenuLinks = ({ menuStyle, linkStyle, links, icon }) => {
   const router = useRouter();
 
+  const handleNavRoute = (link) => {
+    router.push(`#${link}`);
+    document.getElementById(link)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={menuStyle}>
       {links.map((link, index) => (
-        <Link
+        <button
           key={index}
-          href={link?.href}
-          // onClick={() => router.push(link.href)}
+          onClick={() => handleNavRoute(link?.href)}
           className={linkStyle}
         >
-          {icon && icon} <TextGradient hover>{link.title}</TextGradient>
-        </Link>
+          {icon && icon} <TextGradient hover>{link?.title}</TextGradient>
+        </button>
       ))}
     </div>
   );

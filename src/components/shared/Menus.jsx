@@ -12,19 +12,19 @@ const Menus = ({ className }) => {
     },
     {
       title: "About",
-      href: "#about",
+      href: "about",
     },
     {
       title: "Services",
-      href: "#services",
+      href: "services",
     },
     {
       title: "Portfolio",
-      href: "#portfolio",
+      href: "portfolio",
     },
     {
       title: "Contact",
-      href: "#contact",
+      href: "contact",
     },
   ];
 

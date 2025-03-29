@@ -17,7 +17,7 @@ import PageWrapper from "../shared/PageWrapper";
 
 const HeroSection = () => {
   return (
-    <div id="about">
+    <section id="about">
       <PageWrapper>
         <div className="py-20">
           <h1 className="font-outline-2 text-center text-7xl font-bold capitalize text-transparent md:text-9xl">
@@ -33,9 +33,9 @@ const HeroSection = () => {
                 biography
               </h3>
               <p className="mt-2 text-lg font-light capitalize tracking-wide text-white/70">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis quidem impedit dolor libero, sed soluta deleniti eum
-                dignissimos facilis reiciendis?
+                Motivated MERN Stack Developer skilled in building dynamic,
+                scalable web applications. Passionate about clean code,
+                performance optimization, and seamless user experiences.
               </p>
             </div>
             <div>
@@ -135,7 +135,7 @@ const HeroSection = () => {
           </div>
         </div>
       </PageWrapper>
-    </div>
+    </section>
   );
 };
 
